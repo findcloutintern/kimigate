@@ -1,0 +1,22 @@
+[project]
+name = "kimigate"
+version = "1.0.0"
+description = "gateway proxy for using claude code with nvidia nim kimi k2.5"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard]>=0.115.0",
+    "uvicorn>=0.34.0",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "tiktoken>=0.7.0",
+    "pydantic-settings>=2.0.0",
+    "aiolimiter>=1.2.0",
+    "openai>=1.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
