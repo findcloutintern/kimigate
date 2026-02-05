@@ -97,7 +97,8 @@ if not exist "%SHORTCUTS_DIR%" (
 echo creating kimigate command...
 (
 echo @echo off
-echo start /b "" cmd /c "cd /d %KIMI_DIR% ^&^& %UV_PATH% run python server.py ^>nul 2^>^&1"
+echo cd /d %KIMI_DIR%
+echo start /b "" %UV_PATH% run python server.py
 echo timeout /t 3 /nobreak ^>nul
 echo set ANTHROPIC_AUTH_TOKEN=kimigate
 echo set ANTHROPIC_BASE_URL=http://localhost:8082
